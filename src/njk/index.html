@@ -1,23 +1,26 @@
 {% extends '_layouts/base.njk' %}
 
-{% block page_title %}New index page title{% endblock %}
+{% block page_title %}Queen{% endblock %}
 
 {% block content %}
 
 <div class="container">
   <div class="row">
     <div class="col">
-    <h1>Main headline</h1>
-    <p class="author">By {% for author in authors %}
-      <a href="{{ author.link }}" target="_blank">{{ author.name }}</a>{% if not loop.last %}{% if loop.revindex0 == 1 %} and {% else %}, {% endif %}{% endif %} {% endfor %}
-      <br> Published {{ publish_date }}
-    </p>
+    <h1>Queen</h1>
     </div>
   </div>
   <div class="row">
     <div class="col">
     <p>
-      Lucas ipsum dolor <a href="detail-page.html">link to detail-page.html</a> amidala sith dooku solo moff organa obi-wan windu. Gamorrean binks wedge darth. Mon darth mon kit ponda solo. Moff watto ackbar mothma moff anakin. Lando skywalker lars fett calrissian lars organa. Organa kenobi wedge darth jawa skywalker anakin. Twi'lek kit darth calamari lando kamino droid. Darth jawa fett grievous maul. Palpatine obi-wan leia tusken raider dagobah. Twi'lek qui-gon boba antilles yoda thrawn. Wampa luuke wampa skywalker. Moff ponda ackbar dagobah kit lobot jinn solo.
+      "Queen are a British rock band that formed in London in 1970. 
+      Their classic line-up was <a href="freddiemercury.html">Freddie Mercury</a> (lead vocals and piano), 
+      <a href="brianmay.html">Brian May</a> (lead guitar and vocals), <a href="rogertaylor.html">Roger Taylor</a> (drums and vocals), 
+      and <a href="johndeacon.html">John Deacon</a> (bass guitar). Their earliest works were influenced by 
+      progressive rock, hard rock and heavy metal, but the band gradually 
+      ventured into more conventional and radio-friendly works by incorporating 
+      further styles, such as arena rock and pop rock, into their music."
+      <br>-from Wikipedia
     </p>
       <ul> 
         {% for book in books %}
