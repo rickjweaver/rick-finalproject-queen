@@ -24,7 +24,7 @@
     </p>
     {% for member in members %}
     <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="{{ member.image }}" alt="Card image cap">
+    <img class="card-img-top" src="assets/img/members/{{ member.image }}" alt="Card image cap">
     <div class="card-body">
     <h5 class="card-title">{{ member.name }}</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -38,11 +38,11 @@
 
      <ul class="list-unstyled">
     <li class="media">
-    {% for discography in discography %}
-    <img class="mr-3" src="{{ discography.image }}">
+    {% for album in albums %}
+    <img class="mr-3" src="assets/img/discs/{{ album.image }}">
     <div class="media-body">
-      <h5 class="mt-0 mb-1">{{ discography.title }}</h5>
-      {{ discography.year }}
+      <h5 class="mt-0 mb-1">{{ album.title }}</h5>
+      {{ album.year }}
        {% else %}
           <li>This would display if the 'discography' collection were empty</li>
         {% endfor %}
