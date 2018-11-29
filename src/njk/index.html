@@ -22,18 +22,24 @@
       further styles, such as arena rock and pop rock, into their music."
       <br>-from Wikipedia
     </p>
-      <ul> 
-        {% for member in members %}
-          <li>{{ member.slug }}, {{ member.name }}</li>
-        {% else %}
+    {% for member in members %}
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{ member.image }}" alt="Card image cap">
+    <div class="card-body">
+    <h5 class="card-title">{{ member.name }}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="{{ member.url }}" class="btn btn-primary">{{ member.slug }}</a>
+    {% else %}
           <li>This would display if the 'members' collection were empty</li>
-        {% endfor %}
-     </ul>
+    {% endfor %}
+  </div>
+</div>
+
 
      <ul class="list-unstyled">
     <li class="media">
     {% for discography in discography %}
-    <img class="mr-3" src="{{ discography.image }}" alt="{{ discography.image }}">
+    <img class="mr-3" src="{{ discography.image }}">
     <div class="media-body">
       <h5 class="mt-0 mb-1">{{ discography.title }}</h5>
       {{ discography.year }}
