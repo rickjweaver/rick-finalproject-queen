@@ -1,17 +1,12 @@
 {% extends '_layouts/base.njk' %}
-{% set member = members %}
-{% block content %}  
-<p>
-    <div class="card" style="width: 18rem;">
-    {% for member in members %}
-    <img class="card-img-top" src="assets/img/members/{{ member.image }}" 
-    alt="Card image cap">
-    <div class="card-body">
-    <h5 class="card-title">{{ member.name }}</h5>
-    <a href="{{ member.url }}" class="btn btn-primary">{{ member.slug }}</a>
-    {% else %}
-          <li>This would display if the 'members' collection were empty</li>
-    {% endfor %}
-    </div>
+
+  {% block content %}
+  <div class="row"> 
+<p>blahbla lblbh a bh
+
 </p>
-{% endblock %}
+</div>
+
+  {% endblock %}
+
+
