@@ -1,11 +1,7 @@
 {% extends '_layouts/detail.njk' %}
-
+{% set member = members[0] %}
 {% block page_title %}Queen | Freddie Mercury{% endblock %}
 
 {% block content %}
-  {% for member in members %}
-        <li>{{ member.slug }}, {{ member.name }}</li>
-   {% else %}
-        <li>This would display if the 'members' collection were empty</li>
-   {% endfor %}
+
 {% endblock %}

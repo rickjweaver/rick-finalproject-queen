@@ -10,6 +10,7 @@
     <h1>Queen</h1>
     </div>
   </div>
+
   <div class="row">
     <div class="col">
     <p>
@@ -22,20 +23,26 @@
       further styles, such as arena rock and pop rock, into their music."
       <br>-from Wikipedia
     </p>
-    {% for member in members %}
+    </div>
+  </div>
+  
+  <div class="row">
+  <div class="col-sm-8">   
     <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="assets/img/members/{{ member.image }}" alt="Card image cap">
+    {% for member in members %}
+    <img class="card-img-top" src="assets/img/members/{{ member.image }}" 
+    alt="Card image cap">
     <div class="card-body">
     <h5 class="card-title">{{ member.name }}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="{{ member.url }}" class="btn btn-primary">{{ member.slug }}</a>
     {% else %}
           <li>This would display if the 'members' collection were empty</li>
     {% endfor %}
+    </div>
   </div>
 </div>
 
-
+  <div class="col-sm-4">
      <ul class="list-unstyled">
     <li class="media">
     {% for album in albums %}
@@ -46,11 +53,10 @@
        {% else %}
           <li>This would display if the 'discography' collection were empty</li>
         {% endfor %}
-    </div>
+    
   </li>
   </ul>
-    </p>
-    </div>
   </div>
-</div>
+  </div>
 {% endblock %}
+
