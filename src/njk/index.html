@@ -23,12 +23,27 @@
       <br>-from Wikipedia
     </p>
       <ul> 
-        {% for book in books %}
-          <li>{{ book.title }}, {{ book.author }}</li>
+        {% for member in members %}
+          <li>{{ member.slug }}, {{ member.name }}</li>
         {% else %}
-          <li>This would display if the 'books' collection were empty</li>
+          <li>This would display if the 'members' collection were empty</li>
         {% endfor %}
      </ul>
+
+     <ul class="list-unstyled">
+    <li class="media">
+    {% for discography in discography %}
+    <img class="mr-3" src="{{ discography.image }}" alt="{{ discography.image }}">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">{{ discography.title }}</h5>
+      {{ discography.year }}
+       {% else %}
+          <li>This would display if the 'discography' collection were empty</li>
+        {% endfor %}
+    </div>
+  </li>
+  </ul>
+    </p>
     </div>
   </div>
 </div>
