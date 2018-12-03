@@ -4,15 +4,18 @@
 
 {% block content %}
 
+
 <div class="container">
   <div class="row">
     <div class="col">
     <h1>Queen</h1>
     </div>
   </div>
+  </div>
 
+<div class="container">
   <div class="row">
-    <div class="col">
+    <div class="col-sm-12">
     <p>
       "Queen are a British rock band that formed in London in 1970. 
       Their classic line-up was <a href="freddiemercury.html">Freddie Mercury</a> (lead vocals and piano), 
@@ -25,38 +28,42 @@
     </p>
     </div>
   </div>
-  
-  <div class="row">
-  <div class="col-sm-8">   
-    <div class="card" style="width: 18rem;">
-    {% for member in members %}
-    <img class="card-img-top" src="assets/img/members/{{ member.image }}" 
-    alt="Card image cap">
-    <div class="card-body">
-    <h5 class="card-title">{{ member.name }}</h5>
-    <a href="{{ member.url }}" class="btn btn-primary">{{ member.slug }}</a>
-    {% else %}
-          <li>This would display if the 'members' collection were empty</li>
+</div> 
+
+    {% for member in members %}   
+    <div class="container" alt="card">
+      <div class="row justify-content-md-center">
+        <div class="col-sm-8">
+        <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="assets/img/members/{{ member.image }}" alt="Card image cap">
+        <div class="card-body">
+        <a href="{{ member.url }}" class="btn btn-primary">
+        <h5 class="card-title">{{ member.name }}</h5></a>
+        </div>
+        </div>
+        </div>
+      </div>
+  </div>
     {% endfor %}
+  
+    {% for album in albums %}
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-4">
+         <ul class="list-unstyled">  
+          <li class="media">
+          <img class="mr-3" src="assets/img/discs/{{ album.image }}">
+          <div class="media-body">
+          <h5 class="mt-0 mb-1">{{ album.title }}</h5>
+          {{ album.year }}
+          </div>
+          </li>
+        </ul>  
+      </div>
     </div>
   </div>
-</div>
-
-  <div class="col-sm-4">
-     <ul class="list-unstyled">
-    <li class="media">
-    {% for album in albums %}
-    <img class="mr-3" src="assets/img/discs/{{ album.image }}">
-    <div class="media-body">
-      <h5 class="mt-0 mb-1">{{ album.title }}</h5>
-      {{ album.year }}
-       {% else %}
-          <li>This would display if the 'discography' collection were empty</li>
         {% endfor %}
     
-  </li>
-  </ul>
-  </div>
-  </div>
+
 {% endblock %}
 

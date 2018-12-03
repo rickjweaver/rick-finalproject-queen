@@ -1,10 +1,23 @@
 {% extends '_layouts/base.njk' %}
 
   {% block content %}
-  <div class="row"> 
-<p>blahbla lblbh a bh
 
-</p>
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-4 left-rail">
+    <img src="assets/img/members/{{ members.image }}" alt="members" class="img-fluid">
+    <p>{{ members.name }}</p>
+    <p><cite>{{ members.instruments }}</cite>
+    {{ members.tenure }}</p>
+    <ul>
+    <li>{{ members.birthplace }}</li> 
+    <li>{{ members.birthdate }}</li>
+   </div>
+
+    <div class="col-sm-8 right-rail">
+     <p>{{ members.text | safe }}</p>
+    </div>
+  </div>
 </div>
 
   {% endblock %}
