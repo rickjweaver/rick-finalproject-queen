@@ -21,4 +21,20 @@
 // Import partials
 @import "nav";
 @import "jumbotron";
+@import "footer";
 
+h3 {
+  padding-bottom: -200px;
+}
+
+.media img {
+  width: 50%;
+}
+
+#tangerine {
+  font-family: 'Tangerine', cursive;
+}
+
+#khula {
+  font-family: 'Khula', serif;
+}
