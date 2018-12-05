@@ -6,33 +6,34 @@
 
 
 <div class="container">
-  <div class="row">
-    <div class="col">
-    <h1><img src="assets/img/queen-logo-black.png" width="160px" /></h1>
-  
-    <p>
-      "Queen are a British rock band that formed in London in 1970. 
-      Their classic line-up was <a href="freddiemercury.html">Freddie Mercury</a> (lead vocals and piano), 
-      <a href="brianmay.html">Brian May</a> (lead guitar and vocals), <a href="rogertaylor.html">Roger Taylor</a> (drums and vocals), 
-      and <a href="johndeacon.html">John Deacon</a> (bass guitar). Their earliest works were influenced by 
-      progressive rock, hard rock and heavy metal, but the band gradually 
-      ventured into more conventional and radio-friendly works by incorporating 
-      further styles, such as arena rock and pop rock, into their music."
-      <br>-from Wikipedia
-    </p>
+
+      <div class="card bg-dark intro">
+        <div class="card-body">
+      <h1><img src="assets/img/queen-logo-black.png" class="mt-1" width="160px" /></h1>
+
+      <p class="bg-dark text-secondary mb-2">
+        "Queen are a British rock band that formed in London in 1970. 
+        Their classic line-up was <a href="freddiemercury.html" class="text-secondary">Freddie Mercury</a> <cite>(lead vocals and piano)</cite>, 
+        <a href="brianmay.html" class="text-secondary">Brian May</a> <cite>(lead guitar and vocals)</cite>, <a href="rogertaylor.html" class="text-secondary">Roger Taylor</a> <cite>(drums and vocals)</cite>, 
+        and <a href="johndeacon.html" class="text-secondary">John Deacon</a> <cite>(bass guitar)</cite>. Their earliest works were influenced by 
+        progressive rock, hard rock and heavy metal, but the band gradually 
+        ventured into more conventional and radio-friendly works by incorporating 
+        further styles, such as arena rock and pop rock, into their music."
+        <br>-from Wikipedia
+      </p>
     </div>
   </div>
-
+  <p>
   <div class="row">
     <div class="col-sm-8">
     <div class="row">
       {% for member in members %}  
       <div class="col-md-6 mb-4"> 
         <div class="card">
-          <img class="card-img-top" src="assets/img/members/{{ member.imagebw }}" alt="Card image cap">
+          <img class="card-img-top" src="assets/img/members/{{ member.imagebw }}">
           <div class="card-body">
-            <a href="{{ member.url }}" class="btn btn-outline-dark text-center">
-            <h5 class="card-title">{{ member.name }}</h5></a>
+            <a href="{{ member.url }}" class="btn btn-outline-dark btn-block">
+            <h5 class="card-title mt-2">{{ member.name }}</h5></a>
           </div>
         </div>
       </div>
@@ -40,14 +41,15 @@
     </div>
     </div>
 
+  
     <div class="col-sm-4"> 
       {% for album in albums %}
-        <ul class="list-unstyled">  
-          <li class="media">
+        <ul class="list-unstyled bg-dark text-light">  
+          <li class="media border">
           <img class="img-fluid mr-3" src="assets/img/discs/{{ album.image }}">
           <div class="media-body">
-          <h5 class="mt-0 mb-1" id="khula">{{ album.title }}</h5>
-          {{ album.year }}
+          <h4 class="mt-0 mb-0" id="cinzel">{{ album.title }}</h5>
+          <p class="mt-0">{{ album.year }}</p>
           </div>
           </li>
         </ul>  
