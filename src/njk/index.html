@@ -44,11 +44,11 @@
   
     <div class="col-sm-4"> 
       {% for album in albums %}
-        <ul class="list-unstyled bg-dark text-light">  
-          <li class="media border">
-          <img class="img-fluid mr-3" src="assets/img/discs/{{ album.image }}">
+        <ul class="list-unstyled text-light">  
+          <li class="media">
+          <img class="img-fluid border mr-1" src="assets/img/discs/{{ album.image }}">
           <div class="media-body">
-          <h4 class="mt-0 mb-0" id="cinzel">{{ album.title }}</h5>
+          <h5 class="mb-0" id="cinzel">{{ album.title }}</h5>
           <p class="mt-0">{{ album.year }}</p>
           </div>
           </li>
