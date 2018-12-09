@@ -5,8 +5,8 @@
   <div class="container">
   <div class="row">
     <div class="col-sm-4 left-rail">
-    <img src="assets/img/members/{{ members.image }}" alt="members" class="img-fluid">
-    <h1 class="mb-0" id="tangerine">
+    <img src="assets/img/members/{{ members.image }}" alt="members" class="img-fluid border">
+    <h1 class="mt-2 mb-0" id="tangerine">
     {{ members.name }}</h3>
     <p class="mt-0 mb-0"><strong>{{ members.instruments }}</strong>
     <cite>{{ members.tenure }}</cite></p>
@@ -15,7 +15,8 @@
    </div>
 
     <div class="col-sm-8 right-rail">
-    <div class="card bg-secondary text-dark">
+    <div class="card border bg-dark text-secondary mb-4">
+    <div class="card-body">
      <p class="text-justify pl-3 pr-3">{{ members.text | safe }}</p>
     </div>
     </div>
